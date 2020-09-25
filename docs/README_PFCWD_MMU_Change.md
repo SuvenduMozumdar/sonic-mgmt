@@ -1,8 +1,8 @@
 
 
-### Testbed
+## Testbed
 
-#### Topology 2
+### Topology 2
 ```
 +-------------+      +--------------+      +-------------+       
 | Keysight TX |------|   SONiC DUT  |------| Keysight RX | 
@@ -11,6 +11,22 @@
 Keysight ports are connected via SONiC switch as shown in the illustration above.
 ```
 *Fig. 2: Topology 2*
+
+## Setup configuration
+
+### DUT Configuration
+•	Configure alpha value in DUT:
+
+**_sudo mmuconfig -p [profile_name] -a [alpha_value]_**
+
+•	To check all the profiles in DUT:
+
+**_mmuconfig -l_**
+
+### Keysight configuration
+•	All Keysight ports should have the same bandwidth capacity.
+
+•	Test specific configurations are mentioned in respective test cases.
 
 ### Test Case - Verify impact of MMU change on PFCWD
 
